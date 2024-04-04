@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login and Registration</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="main">
+		<div class="card">
+			<div class="card-title">
+				<h3>User <span id="action_title">Login</span></h3>	
+				</div>
+				<div class="card-body">
+					<div class="card-body-top">
+					<button id="login" class="btn" onclick="login_btn()" required>login
+					</button>
+					<button id="register" class="btn" onclick="register_btn()" required>register
+					</button>
+					<div id="bottom_line"></div> 
+				</div>
+					<div class="card-body-bottom">
+						<form id="login_form">
+							<br>
+							<input type="email" class="input-field" required="" placeholder="Enter your email"><br><br>
+							<input type="password" class="input-field" required="" placeholder="Enter your password"><br><br><br>
+							<input type="submit" class="submit-field" value="Login">
+
+						</form>
+						<form id="register_form">
+							<input type="text" class="input-field" required="" placeholder="Enter your name"><br><br>
+							<input type="username" class="input-field" required="" placeholder="Enter your username"><br><br>
+							<input type="password" class="input-field" required="" placeholder="Enter your password"><br><br><br>
+							<input type="submit" class="submit-field" value="Register">
+						</form>
+						<div class="clear"></div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<script>
+		var a = document.getElementById('login_form');
+		var b = document.getElementById('register_form');
+		var c = document.getElementById('bottom_line');
+		var d = document.getElementById('login');
+		var e = document.getElementById('register');
+		var span = document.getElementById('action_title');
+
+		function register_btn(){
+			a.style.left ="-450px";
+			b.style.left ="30px";
+			c.style.left ="215px";
+			d.style.color ="skyblue";
+			e.style.color ="lightcyan";
+			span.textContent = "register";
+		}
+
+		function login_btn(){
+			a.style.left ="30px";
+			b.style.left ="450px";
+			c.style.left ="30px";
+			d.style.color ="lightcyan";
+			e.style.color ="skyblue";
+			span.textContent = "login";
+		}
+	</script>
+
+
+</body>
+</html>
